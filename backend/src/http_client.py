@@ -24,4 +24,4 @@ class CMCHTTPCliecnt(HTTPCliecnt):
                 params={"id": currency_id}
             ) as resp:
             result = await resp.json()
-            return result["data"]
+            return result["data"][str(currency_id)]
